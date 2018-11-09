@@ -56,10 +56,11 @@ const styles = StyleSheet.create({
     width: 48,
     height: 48,
     position: 'absolute',
-    bottom: 32,
-    right: 32,
+    bottom: 24,
+    right: 24,
   },
   circleButton: {
+    margin: 8,
     width: 48,
     height: 48,
     borderRadius: 24,
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
+    elevation: 4,
   },
   circleButtonTitle: {
     fontFamily: 'FontAwesome',
