@@ -10,10 +10,8 @@ class MemoCreateScreen extends React.Component {
   };
 
   handlePress() {
-    // const { params } = this.props.navigation.state;
     const db = firebase.firestore();
     const { currentUser } = firebase.auth();
-    console.log('test', currentUser);
     db.settings({
       timestampsInSnapshots: true,
     });
@@ -21,11 +19,10 @@ class MemoCreateScreen extends React.Component {
       body: this.state.body,
       createdOn: new Date(),
     })
-      .then((docRef) => {
-        console.log(docRef.id);
+      .then(() => {
+        this.props.navigation.goBack();
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
       });
   }
 
